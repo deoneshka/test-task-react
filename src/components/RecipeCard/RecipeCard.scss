@@ -1,0 +1,42 @@
+@import '../../styles/shared.scss';
+
+.recipe-card {
+  &__wrapper {
+    background-color: #f8f8f8;
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 290px;
+    margin-bottom: 35px;
+  }
+}
+
+.info {
+  &__title {
+    font-weight: 700;
+    @include font(24px, 28px);
+    color: $primary-font-color;
+    margin-bottom: 26px;
+    padding: 0 10px;
+  }
+
+  &__description {
+    font-weight: 400;
+    @include font(18px, 25px);
+    color: $primary-font-color;
+    padding: 0 10px 72px 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    &__title {
+      padding: 0 28px;
+    }
+
+    &__description {
+      padding: 0 28px 72px 28px;
+    }
+  }
+}

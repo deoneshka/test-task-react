@@ -1,0 +1,74 @@
+@import '../../styles/shared.scss';
+
+.header {
+  background-color: #f2f2f2;
+
+  & .container {
+    padding: 0;
+    width: 247px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1;
+    font-weight: 400;
+    @include font(18px, 21px);
+    color: $primary-font-color;
+    padding: 10px 28px;
+    background-color: #c4c4c4;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.navigation__link {
+  text-decoration: none;
+  font-weight: 400;
+  @include font(18px, 21px);
+  color: $primary-font-color;
+  padding-top: 20px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    & .container {
+      padding-left: 102px;
+      padding-right: 102px;
+      width: 1440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 1236px;
+    }
+
+    &__button {
+      position: static;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      margin-left: 302px;
+    }
+  }
+}

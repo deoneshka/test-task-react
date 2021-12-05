@@ -1,0 +1,29 @@
+@import '../../styles/shared.scss';
+
+.recipe-card {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 390px;
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
+
+.button-wrapper__button {
+  font-weight: 400;
+  @include font(18px, 21px);
+  color: $primary-font-color;
+  padding: 12px 50px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .button-wrapper__button {
+    padding: 12px 77px;
+  }
+}

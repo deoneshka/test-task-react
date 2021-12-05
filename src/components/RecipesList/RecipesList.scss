@@ -1,0 +1,35 @@
+.list__item {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 390px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  & .recipe-card__image {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .recipe-card__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list__item {
+    position: static;
+    left: 0;
+    transform: translate(0);
+  }
+
+  .list__item:nth-child(-n + 6) {
+    margin-bottom: 33px;
+  }
+
+  .list__item:not(:nth-child(3n)) {
+    margin-right: 33px;
+  }
+}
